@@ -1,0 +1,11 @@
+<!--外部标签（内部标签）-->
+
+<!ELEMENT students (student*) >
+<!--子标签-->
+<!ELEMENT student (name,age,sex)>
+<!--定义子标签格式， name，age ， sex 格式pcdata为字符串格式 -->
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+<!--属性 required必须出现-->
+<!ATTLIST student number ID #REQUIRED>

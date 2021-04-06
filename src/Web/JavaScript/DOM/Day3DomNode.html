@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<style>
+    div{
+        border: red solid 2px;
+    }
+    #div1{
+        width: 100px;
+        height: 80px;
+        border: red solid 2px;
+    }
+    #div2{
+        width: 50px;
+        height: 40px;
+        border: red solid 2px;
+
+    }
+    #div2{
+        width: 30px;
+        height: 20px;
+        border: red solid 2px;
+
+    }
+
+</style>
+<div id="div1">div1
+    <div id="div2">div2</div>
+</div>
+<a href="javascript:void(0);" id="del">删除div2</a>
+<input type="button" id="btn" value="删除div2">
+<input type="button" id="btn2" value="添加div3">
+
+<script>
+    var btn1=document.getElementById("btn");
+    btn1.onclick=function () {
+        div1=document.getElementById("div1");
+        div2=document.getElementById("div2");
+        div1.removeChild(div2);
+    }
+    var del1=document.getElementById("del");
+    del1.onclick=function () {
+        div1=document.getElementById("div1");
+        div2=document.getElementById("div2");
+        div1.removeChild(div2);
+    }
+    var btn2=document.getElementById("btn2");
+    btn2.onclick=function () {
+        div1=document.getElementById("div1");
+        var div3=document.createElement("div");
+        div3.setAttribute("id","div3");
+        div1.appendChild(div3);
+
+    }
+
+</script>
+</body>
+</html>

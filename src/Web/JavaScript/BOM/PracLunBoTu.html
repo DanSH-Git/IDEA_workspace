@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../../HTML&CSS/TravelImg/banner_1.jpg" align="center" width="100%" id="img1">
+<script>
+    var i=1;
+    var ele;
+
+
+    function fun() {
+        //获取元素，修改图像
+        if(i%3==1){
+            // ele.setInterval("ele.src='../../TravelImg/banner_2.jpg'",200)
+            ele=document.getElementById("img1");
+            ele.src="../../TravelImg/banner_2.jpg";
+        }
+        else if(i%3==2){
+            // ele.setInterval("ele.src='../../TravelImg/banner_3.jpg'",200)
+            ele=document.getElementById("img1");
+            ele.src="../../TravelImg/banner_3.jpg";
+        }
+        else {
+            // ele.setInterval("ele.src='../../TravelImg/banner_1.jpg'",200)
+            ele=document.getElementById("img1");
+            ele.src="../../TravelImg/banner_1.jpg";
+        }
+        i++;
+
+    }
+    //设置循环定时器，执行函数
+    setInterval(fun,1000);
+
+</script>
+</body>
+</html>

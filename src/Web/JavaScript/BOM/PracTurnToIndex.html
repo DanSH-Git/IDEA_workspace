@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--倒计时5s后跳转首页
+1，页面信息，文字 5秒后，自动跳转首页...
+2. 文字为红色，设置定时器，每一秒改变一下数字，
+3. 倒计时结束后跳转到https：//www.baidu.com.
+
+-->
+<body>
+<p align="center"><span id="ms" >5</span>秒之后，自动跳转到百度页面</p>
+<style>
+
+    span{
+        color: red;
+    }
+</style>
+<script>
+var ele
+var second=5;
+function DaoJiShi(){
+    second--;
+    if(second<=0){
+        location.href="https://www.baidu.com";
+    }
+    ele=document.getElementById("ms");
+    ele.innerHTML=second+"";
+
+
+}
+setInterval(DaoJiShi,1000);
+</script>
+</body>
+</html>

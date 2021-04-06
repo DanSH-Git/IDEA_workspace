@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<a>点击跳转</a>
+<input type="button" id="btn1" value="set">
+<input type="button" id="btn2" value="remove">
+<script>
+    var btn11=document.getElementById("btn1");
+
+    btn11.onclick=function(){
+        var btn=document.getElementsByTagName("a")[0];
+        btn.setAttribute("href","https://www.baidu.com");
+    }
+    var btn22=document.getElementById("btn2");
+    btn22.onclick=function(){
+        var btn=document.getElementsByTagName("a")[0];
+        btn.removeAttribute("href");
+    }
+
+
+</script>
+</body>
+</html>

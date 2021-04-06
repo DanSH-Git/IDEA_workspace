@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img id="icon" src="../../HTML&CSS/TravelImg/icon_2.jpg">
+<h1 id="h12">lbj</h1>
+
+<img id="EventIcon" src="../../HTML&CSS/TravelImg/icon_3.jpg" onclick="f()">
+<script>
+<!--    设置属性-->
+    var ic=document.getElementById("icon");
+    // alert(ic)
+    ic.src="../../TravelImg/icon_1.jpg";
+    //修改标签体内容
+    var hh=document.getElementById("h12");
+    // alert("asd")
+    hh.innerHTML="srd"
+
+//    事件绑定操作
+var flag=false;
+    function f() {
+        var eve=document.getElementById("EventIcon");
+
+        if(flag){
+        eve.src="../../TravelImg/icon_3.jpg";
+
+        }
+        else{
+            eve.src="../../TravelImg/icon_4.jpg";
+
+        }
+        flag=!flag;
+
+    }
+</script>
+</body>
+</html>
